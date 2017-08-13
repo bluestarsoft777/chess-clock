@@ -1,0 +1,43 @@
+html,
+body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: #3498db;
+	font-family: 'Helvetica Neue', arial, sans-serif;
+	font-weight: 400;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#app {
+	height: 100%;
+}
+/*
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	flex: 1;
+	display: flex;
+}
+
+label input {
+	margin-left: auto;
+}
+
+label + label {
+	margin-top: 20px;
+}
+
+label + button {
+	margin-top: 40px;
+}*/

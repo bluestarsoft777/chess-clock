@@ -1,0 +1,61 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	position: relative;
+}
+
+.containerInactive {
+	composes: container;
+}
+
+.containerInactive::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, 0.45);
+}
+
+.playerArea {
+	flex: 1;
+	font-weight: 600;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	font-size: 40px;
+}
+
+.playerArea span {
+	text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+.playerAreaActive {
+	flex: 2;
+	font-size: 88px;
+}
+
+.player1Area {
+	composes: playerArea;
+	color: white;
+	background: #3498db;
+	transform: rotate(180deg);
+}
+
+.player1AreaActive {
+	composes: player1Area playerAreaActive;
+}
+
+.player2Area {
+	composes: playerArea;
+	color: white;
+	background: #d35400;
+}
+
+.player2AreaActive {
+	composes: player2Area playerAreaActive;
+}
