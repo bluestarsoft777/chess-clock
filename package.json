@@ -6,10 +6,11 @@
 	"scripts": {
 		"test": "eslint src && preact test",
 		"start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-		"build": "preact build --template src/template.html && npm run enable-workspace",
+		"build": "npm run backup-workspace && preact build --template src/template.html && npm run restore-workspace",
 		"serve": "preact build && preact serve",
 		"dev": "preact watch --template src/template.html",
-		"enable-workspace": "echo \"gitdir: /Users/dbadrov/Projects/chess-clock/.git/worktrees/build\" >> build/.git",
+		"backup-workspace": "mv build/.git ./.git.backup",
+		"restore-workspace": "mv .git.backup build/.git",
 		"deploy": "./deploy.sh"
 	},
 	"keywords": [],
